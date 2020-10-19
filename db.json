@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "pid": 1,
+      "name": "Max",
+      "uId": 1,
+      "title": "Hello, this is Max!!!",
+      "body": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+      "pid": 2,
+      "name": "William",
+      "uId": 2,
+      "title": "Hello, this is William!!!",
+      "body": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+      "pid": 3,
+      "name": "Himanshu",
+      "uId": 4,
+      "title": "Hello, this is Himanshu!!!",
+      "body": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+      "pid": 4,
+      "name": "Phillip",
+      "uId": 6,
+      "title": "Hello, this is Phillip!!!",
+      "body": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+      "pid": 5,
+      "name": "jay",
+      "uId": 3,
+      "title": "Hello, this is jay!!!",
+      "body": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    },
+    {
+      "pid": 6,
+      "name": "Mr. X",
+      "uId": 5,
+      "title": "Hello, this is Mr. X!!!",
+      "body": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Max",
+      "email": "max@gradient.com",
+      "address": "ABC, New york, USA"
+    },
+    {
+      "id": 2,
+      "name": "William",
+      "email": "William.j@gradient.com",
+      "address": "ABC, New york, USA"
+    },
+    {
+      "id": 3,
+      "name": "jay",
+      "email": "jay.j@gradient.com",
+      "address": "ABC, Jaipur,India"
+    },
+    {
+      "id": 4,
+      "name": "Himanshu",
+      "email": "Himanshu.j@gradient.com",
+      "address": "123/abc, kota, India"
+    },
+    {
+      "id": 5,
+      "name": "Mr. X",
+      "email": "x@gradient.com",
+      "address": "ABC, New york, USA"
+    },
+    {
+      "id": 6,
+      "name": "Phillip",
+      "email": "Phillip.j@gradient.com",
+      "address": "XYZ, New york, USA"
+    }
+  ]
+}

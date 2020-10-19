@@ -1,0 +1,27 @@
+mat-card,
+form {
+  height: 100%;
+}
+table {
+  width: 90%;
+  margin: auto;
+  border: 1px solid #ccc;
+  td {
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  th {
+    font-size: 18px;
+    .mat-icon {
+      transform: scale(0.8);
+    }
+  }
+  .clicable-headers {
+    cursor: pointer;
+  }
+  .search-text-field {
+    width: 120px;
+  }
+}

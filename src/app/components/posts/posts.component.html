@@ -1,0 +1,95 @@
+<mat-card>
+  <form [formGroup]="form">
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8"
+      *ngIf="dataSource"
+    >
+      <ng-container matColumnDef="pid">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ APP_CONSTANTS.POSTS.TABLE_HEADER.ID }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.pid }}</td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ APP_CONSTANTS.POSTS.TABLE_HEADER.NAME }}
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <a (click)="getUserDetails(element.pid)"> {{ element.name }}</a>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>
+          <span
+            class="clicable-headers"
+            *ngIf="!showTitleSearchBox"
+            (click)="showTitleSearchBox = true"
+            >{{ APP_CONSTANTS.POSTS.TABLE_HEADER.TITLE }}
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >search</mat-icon
+            ></span
+          >
+          <mat-form-field class="search-text-field" *ngIf="showTitleSearchBox">
+            <input
+              matInput
+              type="text"
+              placeholder="Search Title..."
+              formControlName="titleFilter"
+            />
+            <button
+              mat-button
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="clearTitleFilter()"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="body">
+        <th mat-header-cell *matHeaderCellDef>
+          <span
+            class="clicable-headers"
+            *ngIf="!showBodySearchBox"
+            (click)="showBodySearchBox = true"
+            >{{ APP_CONSTANTS.POSTS.TABLE_HEADER.BODY }}
+            <mat-icon aria-hidden="false" aria-label="Example home icon"
+              >search</mat-icon
+            ></span
+          >
+
+          <mat-form-field class="search-text-field" *ngIf="showBodySearchBox">
+            <input
+              matInput
+              type="text"
+              placeholder="Search Post..."
+              formControlName="postFilter"
+            />
+            <button
+              mat-button
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="clearBodyFilter()"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.body }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <div *ngIf="!dataSource">
+      <p>No Data to Show</p>
+    </div>
+  </form>
+</mat-card>
